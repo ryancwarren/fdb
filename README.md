@@ -22,7 +22,7 @@ storage.
 ```
 
 ### Points
-* We should share the mount on the network.  Transactions would be an issue,
+* We could share the mount on the network.  Transactions would be an issue,
 and probably data corruption.
 * Using the file system in this way supplements the need for using a heavy
 API.
@@ -39,7 +39,7 @@ to give us transactions?
   We can implmenet SQL easy enough using shell scripts and arguments.
 
 ```
-  ./insert into <table> values <token1,token2,...,tokenN>
+  ./insert.sh into <table> values <token1,token2,...,tokenN>
 ```
   
   The primary key isn't specified in values.  It's calculated by the insert
