@@ -33,6 +33,12 @@ just as large as some records maybe?
 restrict what that remote user can do based on file permissions.
 * Instead of using character block devices, could we use pipes or FIFOs
 to give us transactions?
+* An API would probably modify a single database file.  At the end of the day,
+it would modify some bytes in that file.  The reason for the binary blob
+loaded as a loopback device is to contrast this point.  We could ignore
+mounting that loopback device and just use the file system as is, it isn't
+necessary at all.  I don't have any practical reason for doing this yet,
+other than that it's interesting.
 
 ## CRUD Operations
 ### Inserting (insert.sh)
